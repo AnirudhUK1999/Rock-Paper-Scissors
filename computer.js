@@ -22,30 +22,27 @@ function playRound(computerSelection,playerSelection){
     }
     else if(computerSelection == choices[1] && playerSelection == choices[2]){
         res = playerTemplate +", Scissors beats Paper"
-        // console.log(playerTemplate + ", Paper beats Rock")
     }
     else if(computerSelection == choices[2] && playerSelection == choices[1]){
         res = compTemplate + ", Scissors beats Paper"
-        // console.log(playerTemplate + ", Paper beats Rock")
     }
     else if(computerSelection == choices[2] && playerSelection == choices[0]){
         res = playerTemplate +", Rock beats paper"
-        // console.log(playerTemplate + ", Paper beats Rock")
     }
     else if(computerSelection == choices[0] && playerSelection == choices[2]){
         res = compTemplate + ", Rock beats paper"
-        // console.log(playerTemplate + ", Paper beats Rock")
     }
     else{
         res = "Draw! Play Again?"
-        // console.log(playerTemplate + ", Paper beats Rock")
     }
     return res
 }
+
 let scorePlayer = 0;
 let scoreComp = 0;
 let result = ""
 let finalDisplay = undefined;
+
 function game(playerSelection){
     computerSelection = getComputerChoice().toString().toLowerCase()
     let winner = playRound(computerSelection,playerSelection);
